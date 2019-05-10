@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Subway Builder</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="./res/nes.css" rel="stylesheet" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+  <style>
+    html,
+    body,
+    pre,
+    code,
+    kbd,
+    samp {
+      font-family: 'Press Start 2P', cursive;
+    }
+  </style>
+  <!-- <link rel="stylesheet" href="./res/light.min.css"> -->
+  <!-- https://www.behance.net/gallery/28289311/Pixel-Art-Menu-(SUBWAY-sandwich) -->
+  <!-- https://www.subway.com/en-SG/MenuNutrition/Menu/BreadsAndToppings -->
+  <!-- https://www.reddit.com/r/CasualMath/comments/2zeyo0/how_many_possible_sandwich_combinations_are_there/?depth=2 -->
+  <style>
+    body {
+      line-height: 1.4;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 10px;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+
+    .center {
+      justify-content: center;
+    }
+
+    .right {
+      justify-content: right;
+    }
+
+    .spaced {
+      justify-content: space-between;
+    }
+
+    .begin>h1 {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 30px;
+    }
+
+    b {
+      color: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="flex begin">
+      <img src="./res/img/logo.png" alt="">
+      <h1>Sandwiches</h1>
+    </div>
+    <br>
+    <p>Have you ever wondered how many unique subway sandwiches you can make? Today we are going to find out.</p>
+    <br>
+    <hr>
+    <img src="./res/img/menu.jpeg" alt="" style="width: 100%;">
+    <hr>
+    <br>
+
+  </section>
+  <section class="nes-container with-title">
+
+    <h2 class="title">Start with the bread</h2>
+    <br>
+
+    <p>According to the <a href="https://www.subway.com/en-SG/MenuNutrition/Menu/BreadsAndToppings">subway website</a>,
+      you have six types of bread to pick from:</p>
+    <div class="flex spaced">
+      <ul class="nes-list is-disc">
+        <li>Italian Wheat</li>
+        <li>Hearty Italian</li>
+        <li>Honey Oat</li>
+        <li>Parmesan Oregano</li>
+        <li>Multigrain</li>
+        <li>Flatbread</li>
+      </ul>
+      <img src="./res/img/bread.png" alt="">
+    </div>
+    <p>This gives us <b>6</b> options to start with.</p>
+  </section>
+  <br><br>
+  <section class="nes-container with-title">
+
+    <h2 class="title">Add the Filling</h2>
+    <br>
+
+    <p>You can chose one of the <b>16</b> different fillings:</p>
+    <div class="flex spaced">
+      <ul class="nes-list is-disc">
+        <li>Chicken Bacon Ranch</li>
+        <li>Chicken Teriyaki</li>
+        <li>Cold Cut Trio</li>
+        <li>Egg Mayo</li>
+        <li>Italian B.M.T.™</li>
+        <li>Meatball Marinara Melt</li>
+        <li>Roast Beef</li>
+        <li>Roasted Chicken Breast</li>
+        <li>Steak & Cheese</li>
+        <li>Subway Club™</li>
+        <li>Chicken Ham</li>
+        <li>Subway Melt™</li>
+        <li>Tuna</li>
+        <li>Turkey</li>
+        <li>Veggie Delite™</li>
+        <li>Veggie Patty</li>
+      </ul>
+      <img src="./res/img/one-sandwich.png" alt="">
+    </div>
+    <p>Now we have more options:</p>
+    <p>$$6 \times 16 = 96$$ </p>
+  </section>
+  <br><br>
+  <section class="nes-container with-title">
+
+    <h2 class="title">Time for vegetables</h2>
+    <br>
+
+    <p>You can also chose to add any of the <b>8</b> vegetables:</p>
+    <div class="flex spaced">
+      <ul class="nes-list is-disc">
+        <li>Cucumbers</li>
+        <li>Green Bell Peppers</li>
+        <li>Lettuce</li>
+        <li>Red Onions</li>
+        <li>Tomatoes</li>
+        <li>Black Olives</li>
+        <li>Jalapenos</li>
+        <li>Pickles</li>
+      </ul>
+      <img src="./res/img/vegetables.png" alt="">
+    </div>
+    <p>This expands the number of options by a lot:</p>
+    <p>$$6 \times 16 \times 2^8 = 24576$$ </p>
+  </section>
+  <br><br>
+  <section class="nes-container with-title">
+
+    <h2 class="title">Finish off with some sauces</h2>
+    <br>
+
+    <p>Pick one of the <b>6</b> sauces available:</p>
+    <div class="flex spaced">
+      <ul class="nes-list is-disc">
+        <li>Chipotle Southwest</li>
+        <li>Ranch</li>
+        <li>BBQ</li>
+        <li>Chili Sauce</li>
+        <li>Tomato Sauce</li>
+        <li>Mayonnaise</li>
+      </ul>
+      <img src="./res/img/salad.png" alt="">
+    </div>
+    <p>Now we have more options:</p>
+    <p>$$6 \times 16 \times 2^8 \times 6 = 147456$$ </p>
+  </section>
+
+  <br><br>
+  <section class="nes-container with-title">
+
+    <h2 class="title">Last but not least...</h2>
+    <br>
+
+    <p>You also have some extra things to add on:</p>
+    <div class="flex spaced">
+      <ul class="nes-list is-disc">
+        <li>Processed Cheddar</li>
+        <li>Monterey Cheddar</li>
+        <li>Extra cheese</li>
+        <li>Toast the beard</li>
+        <li>6-inch or footlong</li>
+      </ul>
+      <img src="./res/img/cheese.png" alt="">
+    </div>
+    <p>Now, the number of options equals:</p>
+    <p>$$6 \times 16 \times 2^8 \times 6 \times 2^5 = 4718592$$ </p>
+  </section>
+
+  <br><br>
+  <section class="nes-container with-title">
+
+    <h2 class="title">Summary</h2>
+    <br>
+    <p>As you can see, there is more that <b>4,718,592</b> possible combinations.</p>
+    <br>
+    <p>So the next time you walk into a subway, try a different sandwich.</p>
+  </section>
+  <br><br>
+  <div class="flex center" style="width:100%;">
+    <img src="./res/img/cookie.png" alt="">
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <footer style="text-align: right;">
+    Created by <a href="https://tcode2k16.github.io/blog/about/">Alan Chang</a>
+  </footer>
+  <br>
+  <footer style="text-align: right;">
+    Art from <a href="https://www.behance.net/joojaebum/">JaeBum Joo</a>
+  </footer>
+
+  <!-- <div class="flex center" style="width:100%;"><img src="./res/img/sandwiches-no-bg.png" alt=""></div> -->
+
+
+</body>
+
+</html>
